@@ -19,3 +19,7 @@ A GitHub egy felhőalapú platform, ahová feltöltheted a Git repóidat, hogy m
 - együttműködési eszközök (pull, push, request, Issue)
 
 **Git** az egy verziókezelő rendszer, amit a **GitHub** használ a repository tárolására és kezelésére.
+
+# Miért érdemes megtanulni a Git-et?
+
+- 
