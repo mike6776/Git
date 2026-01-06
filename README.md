@@ -93,7 +93,7 @@ git config --global alias.st status
 9. **Új ág létrehozása:** `git branch [ág_neve]`  
    Új fejlesztési ág nyitása a kísérletezéshez.
 10. **Átváltás másik ágra:** `git checkout [ág_neve]` vagy `git switch [ág_neve]`  
-    Munkaterület váltása a branchek között.
+   Munkaterület váltása a branchek között.
 
 ## 10 Haladó Git Példa
 
@@ -203,6 +203,37 @@ A Pull Request az a hely, ahol a kollégák átnézik (Code Review) a kódodat, 
 5. Várj a visszajelzésekre (Review). Ha javítani kell valamit, azt a *saját gépeden* javítsd, commitold és pushold ugyanerre az ágra. A PR automatikusan frissül!
 6. Ha elfogadták, kattints a **"Merge pull request"** gombra.
 
+# Commit Üzenet Konvenciók
+
+A jól megírt commit üzenetek segítenek abban, hogy hónapok múlva is értsd (és a csapattársaid is értsék), mi miért történt.
+
+## Conventional Commits
+
+Ez a legnépszerűbb szabvány. Segítségével automatikusan generálható a changelog és könnyebb keresni a history-ban.
+
+**Formátum:** `<típus>(<hatókör>): <leírás>`
+
+- `feat`: Új funkció (Feature)
+- `fix`: Hibajavítás (Bug fix)
+- `docs`: Dokumentáció (pl. README bővítése)
+- `style`: Formázás (space, pontosvessző, kód működését nem érinti)
+- `refactor`: Kód átszervezése (se hiba, se új feature)
+- `perf`: Teljesítmény javítás (Performance)
+- `test`: Tesztek hozzáadása
+- `chore`: Karbantartás, build folyamat (Dependencies, config)
+
+**Példa:** `feat(auth): login oldal validáció hozzáadása`
+
+## A Jó Commit 7 Aranyszabálya
+
+1. Legyen üres sor az üzenet címe és a törzse között.
+2. A cím ne legyen hosszabb 50 karakternél.
+3. A címe nagybetűvel kezdődjön.
+4. Ne tegyél pontot a cím végére.
+5. Használj **felszólító módot** (pl. „Fix bug” és nem „Fixed bug”).
+6. A törzs sorai ne legyenek hosszabbak 72 karakternél.
+7. A törzsben fejtsd ki a **MIÉRT**-et, ne azt, hogy **HOGYAN**.
+
 # "Baj van!" - Hibaelhárítás
 
 Ne pánikolj, a Git-ben (szinte) mindent vissza lehet csinálni.
@@ -237,4 +268,3 @@ Megoldás (Letöltés és összefésülés):
 git pull origin [ág_neve]
 # Oldd meg a konfliktusokat ha vannak, majd commit és push újra.
 ```
-
