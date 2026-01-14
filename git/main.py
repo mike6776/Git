@@ -1,5 +1,8 @@
 print("haliho!")
-
+print("gsdhjfgsdh")
+print("Dominik2")
+print("kettő")
 print("Dominik")
+print("valami")
+print("Alfréd")
 print("Miki")
-print("Test")
